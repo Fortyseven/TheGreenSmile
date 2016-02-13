@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+html, body {
+    background: yellowgreen;
+    font-family: "Roboto", sans-serif;
+    width: 600px;
+    padding: 0;
+    margin: 0;
+    transition: 200ms background;
+    transition-timing-function: ease-out;
+}
+
+header {
+    background-image: url("popup_header.png");
+    width: 600px;
+    height: 80px;
+    box-shadow: 0px 4px 5px #444;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 0.5em;
+    font-size: x-small;
+    opacity: 0.75;
+}
+footer a {
+    color: #5C8803;
+}
+
+#Content {
+    margin:         1em;
+    margin-bottom:  0;
+    height:         100%;
+}
+
+group {
+    display:        flex;
+    flex-wrap:      wrap;
+    align-content:  center;
+    padding-bottom: 0.5em;
+}
+
+.title {
+    color: #750343;
+    font-weight: bold;
+}
+
+smile {
+    background:  #CDF283;
+    height:         1em;
+    padding:        0.75em;
+    margin:         0.25em;
+    box-shadow:     0px 2px 3px #5C8803;
+    border-radius:  5px;
+    white-space:    nowrap;
+    cursor:         pointer;
+    flex:           1;
+    flex-basis:     120px;
+    text-align:     center;
+    line-height:    1em;
+}
+
+smile:hover {
+    position: relative;
+    top: 1px;
+    left: -1px;
+    background: #FFFFFF;
+    color: #750343;
+    box-shadow: none;
+    transition: 0.25s all;
+}
+
+.success {
+    background: white;
+}
