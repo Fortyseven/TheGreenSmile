@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="assets/popup.css"/>
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Gag Reflex </span>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Options</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="#" id="btnRestoreDefaults">Factory Reset</a>
+            <a class="mdl-navigation__link" href="#" id="btnChromeStorePage">Chrome Store Page</a>
+            <!--<a class="mdl-navigation__link" href="#" id="btnAbout">About</a>-->
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <!--<div id="HelpBlock">Hostnames are comma-separated, and match anywhere in the URL. Built-in groups are greyed out, and cannot be edited. They can be disabled, or have their color changed, however.</div>-->
+        <div class="btn-new">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">add</i>
+            </button>
+        </div>
+        <!-- ------------ -->
+        <div class="section-heading">Options</div>
+        <div id="OptionBox" class="fieldset">
+            <div>
+                <label>Use on Facebook? <input id="OptionRenderFacebook" type="checkbox"></label>
+                <label>Use on Reddit? <input id="OptionRenderReddit" type="checkbox"></label>
+            </div>
+        </div>
+        <!-- ------------ -->
+        <div id="EditBox">
+            <div class="dialog">
+                <div class="top-row">
+                    <div class="name">
+                        <label>Name</label><input type="text" class="group-name" value="" placeholder="Enter a name for this group."/>
+                    </div>
+                    <div class="colors">
+                        <label>Color<input class="group-color-top" type="color" value="#FFFFFF"/></label>
+                        <!--<label>Bottom<input class="group-color-bottom" type="color" value="#000000"/></label>-->
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <label>Domains <textarea rows=6 class="group-domains" placeholder="Type domain names separated by a comma. (e.g. potato.com, example.com, google.com, etc..."></textarea></label>
+                </div>
+
+                <div class="options">
+                    <label>Enabled <input class="group-enabled" type="checkbox" checked/></label>
+                </div>
+
+                <div class="bottom-row">
+                    <div class="left">
+                        <div class="btn" id="btnEditDelete">Delete Group</div>
+                    </div>
+                    <div class="right">
+                        <div class="btn" id="btnEditCancel">Cancel</div>
+                        <div class="btn btn-save" id="btnEditSave">Save Group</div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- ------------ -->
+        <div class="section-heading">Groups</div>
+        <!-- ------------ -->
+        <div id="Content"></div>
+    </main>
+</div>
+
+<!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-indigo.min.css" />-->
+<link rel="stylesheet" href="assets/material.amber-indigo.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="../vendor/google/material-design-lite.js"></script>
+<script src="../bower_components/zepto/zepto.min.js"></script>
+<script src="../bower_components/micromustache/dist/micromustache.min.js"></script>
+<script src="gag_config.js"></script>
+<script src="popup.js"></script>
+</div>
+</body>
+</html>
